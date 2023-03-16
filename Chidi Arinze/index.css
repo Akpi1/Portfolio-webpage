@@ -1,0 +1,389 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    --color-txt:rgb(17,17,17);
+    --color-txt3:white;
+    --color-txt2:gray;
+    --color-btn:#0062b9;
+    --color-bg:rgb(255,255,255);
+    --color-bg2:rgb(250,250,250);
+    --color-btn2:rgb(231,231,231);
+    scroll-behavior: smooth;
+}
+/* =========================== Global scope ================= */
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+    background-color: white;
+}
+
+.container{
+    width: 85% ;
+}
+a{
+    text-decoration: none;
+}
+.sectionHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 5rem;
+    align-items: center;
+    margin-top: 4rem;
+}
+.sectionHeader h3{
+    font-weight: normal;
+    color: var(--color-txt2);
+    width: 26rem;
+}
+.button {
+    font-weight: bold;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background-color: var(--color-btn);
+    width: 12rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    letter-spacing: 3px;
+}
+.sdNav{
+    display: none;
+}
+.socialWrapper{
+    color: black;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    border: 2px solid var(--color-txt2);
+    position: fixed;
+    top: 32%;
+    background: white;
+    border-radius: 0 10px 10px 0;
+}
+.socialWrapper i{
+    width: 3.6rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    border-bottom: 0px solid;
+    color:black;
+}
+
+/* ======================= End of Global scope=============================== */
+
+/* ======================= header =============== */
+header{
+    background-color:var(--color-bg);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 4rem;
+    text-decoration: none;
+    width: 100vw;
+    position: fixed;
+    z-index: 1000;
+    opacity: 0.93;
+
+}
+header a {
+    color:var(--color-txt);
+}
+header a:hover{
+    color: var(--color-btn);
+}
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav1{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+}
+.nav2{
+    display: flex;
+    justify-content: space-around;
+    gap: 2.5rem;
+}
+.header_imageWrapper{
+    background: var(--color-btn);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+}
+.nav3{
+    display: none;
+}
+/* ===================== end of header ================== */
+
+/* ======================= Home section ========================== */
+.homeSection{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(asset/images.jpeg);
+    background-size: contain;
+}
+
+.homeWrapper{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.homeWrapper h1{
+    margin-bottom: 1.5rem;
+    font-size: 2.8rem;
+    color: white;
+}
+.homeWrapper h5{
+    font-size: 1rem;
+    font-weight: 500;
+    color:white;
+}
+
+/* ================ end of home section ================= */
+
+
+/* ========================= article section =========== */
+
+.aboutUs{
+    background-color:var(--color-bg2);
+    width: 100vw;height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.aboutArticle_text{
+    width: 50%;
+    line-height: 2rem;
+}
+.aboutArticle_text h1{
+    margin-bottom: 2rem;
+}
+.aboutArticle_text h3{
+    font-weight: normal;
+    color: var(--color-txt2);
+}
+.aboutArticle_text span{
+    font-weight: bold;
+}
+
+.aboutArticle{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.aboutMe{
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.6rem;
+    /* width: 21rem; */
+    position: relative;
+    font-size:34px;
+    cursor: pointer;
+    padding-bottom: 2rem;
+    overflow: hidden;
+    letter-spacing: 0.01px;
+  
+}
+.aboutMe::after{
+    content: '';
+    position: absolute;
+    width: 50%;
+    background-color:var(--color-btn) ;
+    height: 5px;
+    bottom:10px;
+    left:0;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+}
+.aboutMe:hover::after{
+    width: 100%;
+}
+.aboutHeader h3{
+    color: var(--color-txt2);
+    font-weight: normal;
+}
+.skills h1{
+    margin-bottom: 2rem;
+}
+
+
+.aboutBtn{
+    background-color: var(--color-btn2);
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 2px;
+    font-size: 12px;
+    color: var(--color-txt2);
+    width: 8rem;
+}
+.skillList{
+    display: grid;
+    grid-template-columns: 35% 35% 30%;
+    justify-content: center;
+    align-items: start;
+    gap:1rem;
+}
+/* ======================== end of about us ============= */
+
+/* ================ project session =================== */
+.projectSection{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    
+}
+.portfolio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+   
+}
+.portfolioWrapper{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   
+}
+.portfolio_imagewrapper{
+    width: 50%;
+}
+img{
+    width: 80%;
+}
+/* ================ end of project session ================== */
+
+/* ================== contact session ===================== */
+.contactUs{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(asset/images.jpeg);
+    background-size: contain;
+    padding-bottom: 2rem;
+}
+.formWrapper{
+    background-color: var(--color-bg);
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    box-shadow: 0px 1px 9px var(--color-txt2);
+    border-radius: 5px;
+}
+
+input{
+    height: 3rem;
+    width: 35rem;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: rgb(240,240,240);
+    border: none;
+    border-radius: 5px;
+}
+textarea{
+    width: 35rem;
+    resize: none;
+    margin-top: 10px;
+    background-color: rgb(240,240,240);
+    border: none;
+    border-radius: 5px;
+}
+button{
+    text-align: right;
+    border: none;
+}
+
+/* ================ end of contact form =============================== */
+footer{
+    background-color: black;
+    height: 13rem;
+    width: 100vw;
+    margin-top: 2rem;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.footerWrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.5px solid white;
+}
+.footerWrapper h1{
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+.footerWrapper h5{
+    font-weight: normal;
+}
+.copyright h5{
+    display: inline-block;
+}
+.copyright a{
+    text-decoration: none;
+    color: white;
+}
+.socialIcon{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+.socialIcon i {
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+}

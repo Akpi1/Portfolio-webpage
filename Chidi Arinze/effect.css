@@ -1,0 +1,98 @@
+.hidden , .hidden2 , .hidden3 , .hidden4, .hidden5 , .hidden6 ,.hidden7 , .hidden8 , .hidden9{
+    opacity: 0;
+}
+.show1{
+    animation: show1 1s ease-in;
+    display: flex;
+    opacity: 1;
+
+}
+@keyframes show1 {
+    0%{
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/* ======================================== */
+.show2{
+    animation: show2 1s ease-in;
+    display: inline-block;
+    opacity: 1;
+}
+@keyframes show2 {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/* ============================================== */
+.show3{
+    animation: show3 1s ease-in;
+    display: flex;
+    opacity: 1;
+}
+@keyframes show3 {
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/* =============================== */
+.show3{
+    animation: show3 1s ease-in;
+    display: flex;
+    opacity: 1;
+}
+@keyframes show3 {
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+/* ======================================= */
+.show4{
+    animation:show4 1s ease-in ;
+    display: inherit;
+    opacity: 1;
+}
+@keyframes show4 {
+    0%{
+        opacity: 0;
+        transform: translateY(10%);
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,217 @@
+@media screen and (max-width:1200px) {
+    *{
+        overflow-x: hidden;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .container{
+        width: 92%;
+    }
+    .formWrapper{
+        width: 59%;
+    }
+}
+@media screen and (max-width:850px){
+    *{
+        overflow-x: hidden;
+    }
+    .socials{
+        display:none;
+    }
+    .homeSection{
+        height:66vh;
+    }
+    .formWrapper{
+        width: 79%;
+    }
+    .aboutArticle{
+        gap: 6rem;
+    }
+    img{
+        width: 80%;
+    }
+    .portfolio_imagewrapper {
+        width: 52%;
+    }
+    .portfolioWrapper h3{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:450px) {
+    *{
+        overflow-x: hidden;
+    }
+    body{
+        overflow-x: hidden;
+        position: relative;
+    }
+    .sdNav{
+        width: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        display: flex;
+        
+    }
+    .sdNav div{
+        height: 4px;
+        width: 1.6rem;
+        background-color: var(--color-txt2);
+    }
+    .container{
+        width: 96%;
+    }
+    .nav2{
+        display: none;
+    }
+    .nav3{
+        position: absolute;
+        top: 4rem;
+        width: 100vw;
+        text-align: right;
+        background-color: var(--color-bg);
+        display: flex;
+        flex-direction: column;
+        position:fixed;
+        z-index:1000;
+        box-shadow:0px 4px 4px rgb(141 121 121 / 68%);
+        
+    }
+    .sda{
+        border-top: 2px solid rgb(240,240,240);
+        padding-right: 12px;
+        padding-top: 21px;
+        padding-bottom: 21px;
+        color: var(--color-txt2);
+    }
+    .sda h4{
+        font-size: 18px;
+    }
+    .homeSection{
+        height:96vh;
+    }
+   
+    .homeWrapper h1{
+        font-size:46px;
+        color:var(--color-txt3);
+    }
+    .homeWrapper h5{
+        font-size: 20px;
+        color:var(--color-txt3);
+    }
+    .button1{
+        width: 72%;
+        letter-spacing: 3px;
+        background: white;
+        color: var(--color-txt);
+        height: 4rem;
+        font-weight: 800;
+        font-size: 18px;
+        box-shadow: 0px 0px 2px white;
+    }
+    .aboutArticle{
+        flex-direction: column;
+        gap: 0;
+    }
+    .aboutArticle_text{
+        width: 100%;
+        line-height:normal;
+    }
+    .aboutArticle_text h3{
+        font-size:17px;
+        color: var(--color-txt2);
+        line-height:1.7;
+    }
+    .skillList{
+        gap: 0;
+    }
+    .portfolioWrapper{
+        flex-direction: column;
+    }
+    .portfolio_txt{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .portfolio_imagewrapper {
+        width: 124%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+   .portfolioWrapper h3 {
+    font-size: 17px;
+    width: 100%;
+    text-align: center
+   }
+   input , textarea{
+    width:100%;
+   }
+   form{
+    padding: 1rem;
+   }
+   
+   .formWrapper{
+    width: 90%;
+   }
+   footer{
+    height: 22rem;
+    margin-top: 0;
+   }
+   .footerWrapper{
+    flex-direction: column-reverse;
+    margin-top: 0;
+    padding-bottom: 2rem;
+   }
+   .contactUs{
+    padding-bottom:5rem;
+   }
+   .button2{
+    width: 100%;
+    font-size: 19px;
+    letter-spacing: 4px;
+   }
+}
+@media screen and (max-width:390px) {
+    .homeWrapper h1{
+        font-size: 44px;
+    }
+    .skillList {
+        grid-template-columns:  50% 50%; 
+        gap: 9px;
+    }
+    .aboutBtn{
+        width:11rem;
+    }
+}
+@media screen and (max-width:350px) {
+    .homeWrapper h1{
+        font-size:38px;
+    }
+    .homeWrapper h5 {
+        font-size: 17px;
+    }
+    .skillList{
+        grid-template-columns: 50% 50%;
+        width: 21rem;
+    }
+    .sectionHeader h3 {
+        width: 100%;
+        font-size: 18px;
+    }
+    .portfolioWrapper h3 {
+        font-size: 15px;
+    }
+    .aboutMe{
+        font-size: 28px;
+        padding-bottom: 1rem;
+    }
+    .aboutBtn{
+        width: 10rem;
+    }
+}
