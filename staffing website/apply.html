@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qrim</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="effects.css">
+    <link rel="stylesheet" href="responsiveContainer.css">
+</head>
+<body>
+    <section class="applySection">
+        <div class="cvSubmission">
+            <h1>CV Submission</h1>
+            <h5>Do you want to work with us? please fill in your details below.</h5>
+        </div>
+        <div class="container applyformContainer">
+            <form class="cvForm" action="https://formspree.io/f/mwkzjngo" method="post" enctype="multipart/form-data">
+                <h3>Full Name:</h3>
+                <label  class="lspacing2">
+                    <input name="firstname" class='inputStyle' type="text" placeholder="Firstname" required>
+                </label>
+                <label>
+                    <input name="surname" class='inputStyle' type="text" placeholder="Surname" required>
+                </label><br>
+                <h3>Phone Number:</h3>
+                <label class="telephoneLabel" >
+                    <input class='inputStyle lspacing2' type="tel" placeholder="Telephone-number" required>
+                </label>
+                <label>
+                    
+                    <h3>Email Address:</h3>
+                    <input name="email" class='inputStyle' type="email" placeholder="Email address" required>
+                </label><br>
+                
+                <h3>Additional information:</h3>
+                <label>
+                    <textarea name=" " id="" cols="30" rows="10" placeholder="Write a little about yourself and we'd get back to you...."></textarea>
+                </label><br>
+                 
+                <button  type="submit">Leave A Message</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
