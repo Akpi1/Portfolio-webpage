@@ -1,0 +1,680 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+    text-decoration: none;
+    --container-bg:80%;
+    --container-md:94%;
+    --container-sd:98%;
+    --color-bg:rgb(241, 224, 170);
+    --color-bg2:white;
+    --color-bg3:rgb(255,249,231);
+    --color-primary:rgb(130,124,131);
+    --color-secondary:rgb(117,107,236);
+    overflow-x: clip;
+    scroll-behavior: smooth;
+    
+}
+body{
+    background:var(--color-bg);
+    width: 100%;
+    display:block;
+    height: auto;
+  
+    
+}
+
+.container{
+    width:var(--container-bg);
+}  
+    /*         Header        */
+header{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    background: var(--color-bg);
+    position: fixed;
+    z-index: 100;
+    background: var(--color-bg);
+    height: 60px;
+    box-shadow: 0px -4px 7px var(--color-primary);
+    align-items: center;
+
+}
+.hamburger{
+    display: none;
+}
+.nav-btn{
+    border: 2px solid black;
+    padding: 7px;
+    font-size: 11px;
+    background: black;
+    color: white;
+    border-radius: 6px;
+}
+nav  a{
+    color: black;
+    transition: 400ms;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.m-nav a:hover{
+    border-bottom:  solid;
+    border-bottom-width: 1px;
+    
+}
+.m-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+.sdNav{
+    padding-top: 9rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap:2rem;
+    font-weight: normal;
+    font-size: 1.7rem;
+    height:100vh;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    align-items: center; 
+    z-index: 99;
+    background:white;
+    display:none;
+}
+.sdNav a{
+    color:black;
+    animation-name: navFade;
+}
+.container-header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+nav{
+    width: 100%;
+    position: relative;
+    height: 40px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center; 
+}
+.logo{
+    color:black;
+}
+
+          /*       END OF HEADER   */
+.intro-section{
+    background: var(--color-bg);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+.intro-card{
+    width:44%;
+    margin-left: 3rem;
+}
+
+.intro-card h1{
+    font-size: 60px;
+    font-family: 'Lobster', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 64px;
+    word-spacing: -7px;
+    margin-bottom: 5px;
+
+}
+.intro-card h1 i{
+    font-family: 'Lobster', cursive;
+}
+.intro-card h3{
+    color: var(--color-primary);
+    font-weight: normal;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+
+}
+.intro-card h4{
+    margin-top: 1rem;
+    color: var(--color-secondary);
+
+}
+
+.intro-card i{
+    font-style: normal;
+    color:var(--color-secondary);
+
+}
+
+.intro-container{
+    
+    margin-top:4rem;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-bottom: 10rem;
+    position: absolute;
+    top:40px;
+    
+}
+.intro-image{
+    width:350px;
+    border-radius: 20px;
+    margin-right: 3rem;
+
+}
+
+.intro-image img{
+    width: 100%;
+    border-radius: 110px;
+    border: 1px solid white;
+}
+   
+   /* ==================END of intro  css======================================== */
+.boom , .boomcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+/* .boomcontainer{
+    position: relative;
+    top:-7rem;
+} */
+.boom{
+    height: 100vh;
+    /* margin-top: -15rem; */
+    background: white;
+}
+.boomcontainer h2{
+    margin-bottom: 3rem;
+}
+.boom-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items:top;
+    height: 30rem;
+    overflow: hidden;
+    gap: 0.5rem;
+    border-radius: 10px;
+}
+.boom1{
+    width: 32rem;
+    height:30rem;
+    
+    
+    /* overflow: hidden; */
+}
+.boom1 img{
+    width: 100%;
+    height: inherit;
+}
+.boom2{
+    width:18rem;
+    height: 30rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+.boom2 img{
+    width: 100%;
+    object-fit: cover;
+}
+.boomcontainer i{
+    font-family: ui-serif;
+    color: var(--color-secondary);
+    font-size: larger;
+}
+.boom1 , .boom2-wrapper{
+    position: relative;
+}
+.boom1 div{
+    position:absolute;
+    bottom:0px;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    background: linear-gradient(rgba(235, 226, 226, 0.603) , black);
+    width: inherit;
+    height: 5rem;
+    padding-right: 15px;
+    
+}
+#boom:hover  .boom2-wrapper div{
+    z-index:1;
+} 
+.boom2-wrapper div{
+    position:absolute;
+    bottom:0px;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    background: linear-gradient(rgba(235, 226, 226, 0.603) , black);
+    width: 18rem;
+    height: 5rem;
+    padding-right: 15px;
+
+    
+}
+.boom2-wrapper h3 , .boom1 h3{
+    color: white;
+    font-weight:lighter;
+    border: 1px solid white;
+    padding: 0.5rem 1rem;
+}
+.boom2-wrapper h3:hover , .boom1 h3:hover{
+    background-color: black;
+    cursor: pointer;
+}
+
+
+
+/* ==========================end of boom container=============================== */
+
+
+.contact-me{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    /* margin-top: -8rem; */
+}
+.contact-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px transparent;
+    box-shadow: 0px 0px 7px var(--color-primary);
+}
+.contact-card{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;  
+    gap: 2rem;
+
+}
+.contactImage{
+    overflow: hidden;
+    width: 20rem;
+}
+.contactImage img{
+    width: 100%;
+}
+.contact-me h1{
+    margin-bottom: 4rem;
+    padding-top: 2rem;
+}
+.contact-me h1 span{
+    color: var(--color-secondary);
+}
+form label{
+    font-weight: bold;
+    
+}
+
+form input, form textarea{
+    margin:8px 0;
+    padding: 5px;
+    color: var(--color-primary);
+    border: 0px;
+    border-bottom: 2px solid var(--color-primary);
+    resize: none;
+    outline-color:  var(--color-primary);
+    outline-width: 2px;
+} 
+form button{
+    background: black;
+    color: white;
+    padding: 10px;
+    border: 1px solid black;
+    transition: 400ms;
+    margin-top: 2rem;
+    border-radius: 4px;
+}
+form button:hover{
+    background:transparent;
+    color: black;
+    CURSOR:pointer;
+}
+.right-contact{
+    padding-bottom: 30px;
+}
+/* ===================End of contact me session========== */
+footer{
+    width:100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+}
+
+
+/* =================responsiveness for medium devices============== */
+@media screen and (max-width:1200px){
+    .intro-card h1{
+        font-size: 60px;
+    }
+    .intro-card{
+        width: 50%;
+    }
+   
+}
+  
+
+@media screen and (max-width:1024px){
+ .container{
+    width: var(--container-md);
+ }
+ /* =========intro section ============ */
+ .intro-card h1{
+    font-size: 54px;
+ }
+ .intro-card h4{
+    font-size: 20px;
+ }
+ /* ============nav ======================= */
+ .bigNav , .nav-btn{
+    display:none;
+ }
+ .hamburger{
+    display:inline-block;
+}
+.hamburger .bi{
+    font-size:4rem;
+}
+.close-btn{
+    display: none;
+}
+.sdNav{
+    height: 30%;
+    padding-top: 1rem;
+    box-shadow: 0px 0px 5px var(--color-primary);
+    top: 60px;
+    align-items: center;
+    justify-items: center;
+    
+}
+.sdNav{
+    
+    animation: navFade 400ms ease-out;
+}
+@keyframes navFade {
+    from{
+        transform:translateY(-50%);
+    }
+    to{
+        transform:translateY(0);
+    }
+    
+}
+}
+@media screen and (max-width:900px){
+    .intro-card h1{
+        font-size: 284%;
+     }
+    .intro-card h3{
+        font-size: 17px;
+    }
+    .intro-card{
+        margin-left: 1rem;
+    }
+}
+ @media screen and (max-width:850px){
+    .intro-card h1{
+        font-size: 273%;
+     }
+    
+}
+@media screen and (max-width:710px){
+    .intro-card h1{
+        font-size: 229%;
+     }
+    .intro-card h3{
+        font-size: 15px;
+    }
+    .intro-card h4 {
+        font-size: 18px;
+    }
+}
+
+
+
+
+/* =============       ===============RESPONSIVE FOR small SCREEN */
+@media screen and (max-width:600px) {
+   .container{
+    width: var(--container-sd);
+   }
+   .intro-container{
+    flex-direction: column;
+    margin-top: 13rem;
+    gap: 1rem
+   }
+   .intro-card{
+    margin:0;
+    width: 90%;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
+   .intro-card h1 {
+    font-size: 59px;
+    letter-spacing: -1px;
+    font-family: monospace;
+    word-spacing: -3px;
+   }
+   
+   .intro-card h3 {
+    color: var(--color-primary);
+    font-weight: normal;
+    font-size: 18px;
+    font-family: inherit;
+   }
+   .intro-image {
+    width: 96%;
+    border-radius: 20px;
+    margin-right: 0rem;
+   }
+
+   /* booooooooooooom container */
+   .boom{
+    margin-top: 99rem;
+   }
+   .boom-wrapper{
+    grid-template-columns: 1fr;
+   }
+   .boom-card{
+    border: 2px solid var(--color-primary);
+   }
+   .boom-wrapper .boom-img {
+    width: 90%;
+    height: 26rem;
+   }
+   .boom-card button {
+    width: 19rem;
+    height: 4rem;
+    font-size: 17px
+   } 
+  
+}
+    
+  
+
+ @media  (max-width:900px) and (max-height:920px){
+    .container{
+        width: var(--container-sd);
+    }
+    /* ===========nav section ============ */
+    
+    .m-nav , .nav-btn{
+        display: none;
+    }
+    .hamburger{
+        display:inline-block;
+    }
+    .hamburger .bi{
+        font-size:4rem;
+    }
+    .close-btn{
+        display: none;
+    }
+    .sdNav{
+        
+            height: 100vh;
+            padding-top: 9rem;
+            box-shadow: 0px 0px 5px var(--color-primary);
+            top: 60px;
+            align-items: center;
+            justify-items: center;
+            
+        
+        animation: navFade 400ms ease-out;
+    }
+    @keyframes navFade {
+        from{
+            transform:translateY(-50%);
+        }
+        to{
+            transform:translateY(0);
+        }
+        
+    }
+    /* ========= intro container ========== */
+    .intro-container{
+        margin-top:4rem;
+        
+    }
+    .intro-card{
+        width: 100%;
+    }
+    .intro-card h1{
+        font-size: 47px;
+    }
+   /* =============boom section ============  */
+    .boom{
+        margin-top: 3%;
+    }
+    .boom-wrapper{
+        height: 100%;
+        width:18rem;
+        display: flex;
+        justify-content: center;
+        align-items:top;
+        flex-direction: column;
+    }
+    .boom1,.boom3 , .boom4{
+        width: 18rem;
+        height:15rem;
+    }
+    /* =======contact me ============== */
+    .contact-me{
+            padding-top: 22rem;
+            height: 66rem;
+    }
+    .contact-wrapper{
+        margin-top: -37rem;
+        box-shadow: none;
+    }
+    .contact-card{
+        margin-top: 0; 
+        flex-direction: column;
+        margin-top: 0;
+        box-shadow: 0px 0px 7px var(--color-primary);
+        width: 96%; 
+    }
+    
+    /* =============end of contact ==================== */
+    footer{
+        height: 5rem;
+        background: var(--color-bg);
+    }
+    .footer-wrapper{
+        flex-direction: column-reverse;
+        justify-content: space-around;
+    }
+
+ }
+ @media screen and (max-width:390px){
+    .intro-card h1 {
+        font-size: 42px;
+        line-height: 47px;
+        padding-top: 1rem;
+    }
+    .intro-section {
+        height: 50rem;
+    }
+    .boom {
+        margin-top: 33%;
+    }
+    .contact-me {
+        padding-top: 39rem;
+    }
+ }
+ @media screen and (width:480px) and (height:854px) {
+    .intro-section{
+        height:64rem;
+    }
+ }
+ @media screen and (width:360px) and (height:740px) {
+    .intro-card h1{
+        font-size: 45px;
+    }
+ }
+ @media screen and ((min-width:700px) and (min-height:1000px)) {
+    .intro-section {
+        height: 71vh;
+    }
+    .intro-container {
+        top: inherit;
+    }
+    .boom {
+        display: flex;
+        justify-content: flex-start;
+        height: 40vh;
+    }
+    .boom1 {
+        width: 26rem;
+    }
+    .contact-me {
+        height: 81vh;
+        padding-top: 2rem;
+    }
+ }
+    
+ 
+    
+
+
+
+
+

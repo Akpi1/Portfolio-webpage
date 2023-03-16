@@ -1,0 +1,84 @@
+
+    .hidden{
+        opacity: 0;
+         transform: translateX(-30%); 
+        transition: 1.5s all ease;
+    }
+    .show{
+        opacity:1 !important;
+         transform: translateX(0); 
+         display: block;
+    }
+    .hidden2{
+        opacity: 0;
+        transform: translateX(30%); 
+       transition: 1.8s all;
+   }
+   .show2{
+        opacity:1;
+       transform: translateX(0); 
+        
+   }
+   .hidden3{
+    opacity:0;
+    transform: translateY(-15%);
+    transition: 1.8s all;
+}
+.show3{
+    opacity:1;
+    transform: translateY(0); 
+}
+/* .hidden4{
+    opacity:0;
+    transform: translateX(-15%);
+    transition: 1.8s all;
+}
+.show4{
+    opacity:1;
+    transform: translateX(0); 
+} */
+
+
+
+/* ================== transition for small devices ========== */
+@media screen and (max-width:600px) {
+    .hidden{
+        opacity: 0;
+         transform: translateX(-10%); 
+        transition: 1.8s all;
+    }
+    .show{
+        opacity:1 !important;
+         transform: translateX(0); 
+         display: block;
+    }
+    .hidden2{
+         opacity: 0;
+         transform: translateY(10%); 
+        transition: 1.8s all;
+    }
+    .show2{
+         opacity:1;
+        transform: translateY(0); 
+         
+    }
+    /* ===========contact card ================== */
+    .hidden3{
+        opacity:0;
+        transform: translateY(15%);
+        transition: 1.8s all;
+    }
+    .show3{
+        opacity:1;
+        transform: translateY(0); 
+    }
+    .hidden4{
+        opacity:0;
+        transform: translateX(-15%);
+        transition: 1.8s all;
+    }
+    .show4{
+        opacity:1;
+        transform: translateX(0); 
+    }
+}
