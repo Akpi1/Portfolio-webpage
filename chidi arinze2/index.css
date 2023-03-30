@@ -10,6 +10,7 @@
     overflow-x:clip;
     scroll-behavior: smooth;
     
+    
 }
 :root{
     --color-white: #fff;
@@ -18,8 +19,16 @@
     --color-purple: #8000ff;
     --color-light-purple: #cf59e6;
     --color-light-blue: #6bc5f8;
+    list-style-type: disc;
+    
 }
-
+::-webkit-scrollbar{
+    width:5px;
+}
+::-webkit-scrollbar-thumb{
+    background:#20222e;
+    border-radius:20px;
+}
 
 /* ===========Global scope============================ */
 
@@ -32,8 +41,14 @@ body{
     letter-spacing: -.03em;
     font-weight: bolder;
     position: relative;
-    scroll-behavior: smooth;
     background-image: url(asset/y-so-serious\ 2.png);
+}
+.bodyWrapper{
+    scroll-snap-type:y mandatory; 
+   scroll-behavior:smooth;
+}
+section{
+    scroll-snap-align:start ;
 }
 
 .flex_r{
@@ -67,11 +82,12 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 51%;
     margin-left: auto;
     margin-right: auto;
     background: rgba(42,43,56,.5);
     border: .2rem solid white;
+    -webkit-backdrop-filter: blur(104px);
     backdrop-filter: blur(104px);
     border-radius: 1rem;
     height: 2.2rem;
@@ -112,18 +128,57 @@ header:hover{
 .cv:hover{
     box-shadow: 0px 4px 0px var(--color-light-blue);
 }
-.hamburger{
-    align-items: flex-start;
-    transition:all 400ms ease;
+.hamburger {
+    transition: all 400ms ease;
     cursor: pointer;
-    width: 3rem;
+    width: auto;
     height: 2rem;
-    display: none;
+    display: flex;
+    align-items: center;
+    
 }
 
 .hamburger:hover{
     transform: scale(90%);
 }
+/* ====== hamburger effect on svg ===================== */
+
+.bHamburger .rect{
+   
+    transition:
+   y 200ms ease-in 200ms ,
+    transform 200ms ease-in,
+    opacity 200ms ease-in 200ms;
+    transform-origin: center; 
+    fill:var(--color-gray)  
+}
+.bHamburger[aria-expanded='true'] .rect{
+    transition: 
+    y 200ms ease-in ,
+    transform 200ms ease-in 200ms,
+    opacity 200ms ease-in 200ms; 
+    transform-origin: center;
+   
+}
+ 
+
+
+.bHamburger[aria-expanded='true'] .rect1{
+ 
+    y:50;
+   transform:rotate(45deg)
+
+}
+.bHamburger[aria-expanded='true'] .rect2{
+    opacity: 0;
+}
+
+.bHamburger[aria-expanded='true'] .rect3{
+    y:50;
+      transform:rotate(-45deg)
+} 
+
+/* ==================================================== */
 
 .imagewrapper_h{
     justify-content: flex-start;
@@ -189,12 +244,20 @@ header:hover{
     position: fixed;
     z-index: 300;
     transform: translateX(-100%);
-    transition: transform 1.2s ease-in-out;
+    transition: transform 700ms ease-in-out;
     overflow-y: scroll;
-    display: none;
+}
+.smallNav .container{
+    transition: opacity 0.2s ease-in 1s;
+    opacity: 0.01;
 }
 .smallNav[data-visible ='true']{
     transform: translateX(0%);
+    
+}
+.smallNav[data-visible ='true'] .container{
+    opacity: 1;
+    
 }
 /* ================end of small nav ================ */
 
@@ -203,6 +266,7 @@ header:hover{
 /* =================End of header============================ */
 
 /* ================== home section ==================== */
+
 .homeSection_span{
     font-family: 'Heebo', sans-serif;
     font-weight: 600;
@@ -254,11 +318,22 @@ header:hover{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 400% 400%;
-    -webkit-animation: gradient 3s ease infinite;
-    animation: gradient 3s ease infinite;
+    -webkit-animation: gradient 1.5s ease infinite;
+    animation: gradient 1.5s ease infinite;
     position: relative;
     overflow: hidden;
 }
+@keyframes gradient{
+    from{
+        background-size:50% 300%;
+    }
+    to{
+        background-size:300% 400%; 
+    }
+}
+
+
+
 
 /* ==================== end of home section ============= */
 
@@ -283,10 +358,10 @@ header:hover{
 .project_txt1 p{
     color: var(--color-gray);
     font-size: 18px;
-    line-height: 29px;
-    font-family: sans-serif;
+    line-height: 28px;
+    font-family: monospace;
     word-spacing: 2px;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.4px;
     margin-top: 1rem;
 }
 .project_txt3 h3{
@@ -406,6 +481,55 @@ header:hover{
 #projects{
     padding-top:9rem;
 }
+.toggleProject{
+    color: var(--color-gray);
+    font-size: 1.6rem;
+    letter-spacing: 0.4px;
+    border-radius: 15px;
+    background: linear-gradient(90deg,#b0f3f1,#ffcfdf);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 4px solid #20222e;
+    padding-block: 5px;
+    transition: all 0.5s linear;
+    z-index: 1;
+    width:51%;
+    justify-content: center;
+}
+.toggleProject:hover{
+    border:4px solid var(--color-light-blue);
+}
+/* ================ plus and minus click button // global scope for every section ========== */
+.plus , .minus {
+    padding-inline: 10px;
+    border-radius: 10px;
+    margin-right: 3rem;
+    color: var(--color-gray);
+    margin-left: 10px; 
+    cursor: pointer;  
+    transition: all 0.5s linear;
+    font-size: 2rem;
+}
+.minus{
+    display: none;
+}
+/* ================================================ */
+.landing_customWrapper{
+    display: none;
+    animation: transDown 0.6s linear;
+}
+
+@keyframes transDown {
+    from{
+        transform: translateY(-60px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+/* ================================================================================================ */
 .project_card {
     width: 50%;
     height: 76vh;
@@ -597,7 +721,7 @@ labelOne{
     font-weight: normal;
     padding-top: 1.2rem;
     color: var(--color-gray);
-    font-family: monospace;
+    font-family:sans-serif;
     margin:1.7rem 0;
 }
 .contactTop span , .contactIcon span{
@@ -717,13 +841,12 @@ footer{
 }
 .footerWrapper h5 , .smallNav__txt h5{
     font-weight: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.1px;
 }
 .copyright{
-    border-top: .1rem solid #20222e;
+
     border-top: .2rem solid #20222e;
     margin-top: 2rem;
     padding-top: 0rem
@@ -841,14 +964,16 @@ footer{
     transition: color 300ms ease;
 }
 
-/* =================== intersection observer ========================== */
 
-/* =============================END OF I0=========================================== */
+
 
 /* ===================================== MEDIUM DEVICE ============================ */
 @media screen and (max-width:81.25em) {
    .hamburger{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width:auto;
    }
    .smallNav{
     display: flex;
@@ -946,7 +1071,7 @@ footer{
     .project_card{
         flex-direction: row;
         width:80%;
-        height: 50vh;
+        height: 50%;
     }
     /* ======skilll set ========= */
 
@@ -1027,9 +1152,28 @@ footer{
     .homesection_wrapper div{
         width:auto;
     }
+    .toggleProject{
+        height: 4rem;
+        font-size: 0.9rem;
+         padding-left: 7px;
+        padding-block: 0px;
+        margin-bottom: 2rem;
+        width:80%;
+
+    }
+    .toggleProject h5{
+        font-size: 14px;
+    }
+    .plus , .minus{
+        margin-right: 2rem;
+        margin-left: 0px;
+        border-radius: 9px;
+    }
+    
     #projects{
         padding-top: 6rem;
     }
+   
     /* =============================== */
     .smallimage_wrapper div:hover{
         transform: scale(100%);
@@ -1155,6 +1299,10 @@ button{
 .smallNav {
     color: var(--color-gray);
     padding-top: 16rem;
+}
+.smallNav_container{
+    position:absolute;
+    top:4rem;
 }
 .sdnavBar {
    top:0;
