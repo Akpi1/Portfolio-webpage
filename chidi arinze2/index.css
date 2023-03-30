@@ -359,9 +359,9 @@ header:hover{
     margin-bottom: 5rem;
 }
 .project_txt1 p{
-    color: var(--color-gray);
+   color: var(--color-gray);
     font-size: 18px;
-    font-weight:Light 300;
+    font-weight: 300;
     line-height: 28px;
     font-family: 'Roboto', sans-serif;
     word-spacing: 2px;
