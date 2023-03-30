@@ -361,7 +361,7 @@ header:hover{
 .project_txt1 p{
     color: var(--color-gray);
     font-size: 18px;
-    font-weight:light 300;
+    font-weight:Light 300;
     line-height: 28px;
     font-family: 'Roboto', sans-serif;
     word-spacing: 2px;
